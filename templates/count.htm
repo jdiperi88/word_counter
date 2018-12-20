@@ -7,6 +7,12 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>Count</h1>
+		<h1>There are {{ word_list }} words in this text.</h1>
+		<p>{{ fulltext }}</p>
+		{{ word_count_Dictionary }}
+		<h1>Word Count:</h1>
+		{% for word, counttotal in sortedwords %}
+		<p>{{ word }} : {{ counttotal }}</p>
+		{% endfor %} <a href="/">Enter New Text</a>
 	</body>
 </html>
